@@ -19,7 +19,7 @@ Entwicklung über Monate und Jahre (das **Lab**) und schlägt jeden Morgen vor, 
 leichter wird oder ausfällt (der **Coach**). Gebaut als mobile Web-App mit Android-Hülle, für meinen eigenen
 Alltag, mit KI-Agenten als Entwicklungsteam und einem Test-zuerst-Vorgehen.
 
-> **Diese Demo zeigt ausschließlich synthetische Beispieldaten** (Stand 14.10.2026). Es sind keine echten
+> **Diese Demo zeigt ausschließlich synthetische Beispieldaten** (Stand 17.10.2026). Es sind keine echten
 > Gesundheitsdaten enthalten, nicht meine und nicht die von jemand anderem. Die Seite lädt nur ihre eigenen Dateien,
 > setzt keine Cookies und hat kein Tracking.
 
@@ -36,7 +36,7 @@ Alltag, mit KI-Agenten als Entwicklungsteam und einem Test-zuerst-Vorgehen.
   <tr>
     <td width="33%" valign="top"><img src="screenshots/coach.png" alt="Coach: Tages-Check und Wochenplan"><br><sub><b>Coach:</b> Tages-Check mit den Nachtwerten und Wochenplan</sub></td>
     <td width="33%" valign="top"><img src="screenshots/lab.png" alt="Lab: Umfang und Ruhepuls"><br><sub><b>Lab:</b> Umfang mit Vorjahreslinie, Ruhepuls, Pace und mehr</sub></td>
-    <td width="33%" valign="top"><img src="screenshots/rueckblick.png" alt="Wochenrückblick mit Ampel"><br><sub><b>Rückblick:</b> Der Rückblick steht auf „kritisch“: Der Einbruch liegt in den letzten sieben Tagen, und der Coach erkennt ihn. Die Demo-Person hat eine eingebaute Einbruchswoche (HRV sinkt, Ruhepuls steigt).</sub></td>
+    <td width="33%" valign="top"><img src="screenshots/rueckblick.png" alt="Wochenrückblick mit Ampel"><br><sub><b>Rückblick:</b> Der Rückblick steht auf „stabil“: Der Einbruch ist fast aus den letzten sieben Tagen herausgelaufen. Die Demo-Person hat eine eingebaute Einbruchswoche (HRV sinkt, Ruhepuls steigt).</sub></td>
   </tr>
 </table>
 

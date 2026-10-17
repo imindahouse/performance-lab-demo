@@ -1,9 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="260" height="44" viewBox="0 0 260 44" role="img" aria-label="Demo öffnen">
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="44" viewBox="0 0 220 44" role="img" aria-label="Demo öffnen">
   <title>▶ Demo öffnen</title>
-  <rect width="260" height="44" rx="22" fill="#15151e"/>
-  <rect x="1" y="1" width="258" height="42" rx="21" fill="none" stroke="#f2b544" stroke-opacity="0.6" stroke-width="2"/>
+  <rect width="220" height="44" rx="22" fill="#15151e"/>
+  <rect x="1" y="1" width="218" height="42" rx="21" fill="none" stroke="#f2b544" stroke-opacity="0.6" stroke-width="2"/>
   <circle cx="26" cy="22" r="12" fill="#f2b544"/>
   <path d="M22.5 16.5v11l9-5.5z" fill="#15151e"/>
   <text x="48" y="28" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#ededf4">Demo öffnen</text>
-  <text x="168" y="27.5" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#a6a6b9">synthetische Daten</text>
 </svg>
