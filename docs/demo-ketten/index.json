@@ -1,0 +1,140 @@
+{
+ "anker": "2026-11-02",
+ "personen": [
+  {
+   "key": "demo_ambitioniert",
+   "race_type": "Marathon",
+   "race_date": "2026-11-29"
+  },
+  {
+   "key": "amateur_a",
+   "race_type": "Halbmarathon",
+   "race_date": "2027-01-03"
+  },
+  {
+   "key": "neuling_a",
+   "race_type": "5K",
+   "race_date": "2027-03-07"
+  },
+  {
+   "key": "demo_film",
+   "race_type": "Halbmarathon",
+   "race_date": "2027-01-10"
+  }
+ ],
+ "lagen": [
+  "plan",
+  "hinten",
+  "krank",
+  "verletzt",
+  "werte"
+ ],
+ "ketten": [
+  {
+   "person": "demo_ambitioniert",
+   "lage": "plan",
+   "knoten": 9
+  },
+  {
+   "person": "demo_ambitioniert",
+   "lage": "hinten",
+   "knoten": 9
+  },
+  {
+   "person": "demo_ambitioniert",
+   "lage": "krank",
+   "knoten": 13
+  },
+  {
+   "person": "demo_ambitioniert",
+   "lage": "verletzt",
+   "knoten": 20
+  },
+  {
+   "person": "demo_ambitioniert",
+   "lage": "werte",
+   "knoten": 20
+  },
+  {
+   "person": "amateur_a",
+   "lage": "plan",
+   "knoten": 5
+  },
+  {
+   "person": "amateur_a",
+   "lage": "hinten",
+   "knoten": 24
+  },
+  {
+   "person": "amateur_a",
+   "lage": "krank",
+   "knoten": 8
+  },
+  {
+   "person": "amateur_a",
+   "lage": "verletzt",
+   "knoten": 16
+  },
+  {
+   "person": "amateur_a",
+   "lage": "werte",
+   "knoten": 11
+  },
+  {
+   "person": "neuling_a",
+   "lage": "plan",
+   "knoten": 5
+  },
+  {
+   "person": "neuling_a",
+   "lage": "hinten",
+   "knoten": 18
+  },
+  {
+   "person": "neuling_a",
+   "lage": "krank",
+   "knoten": 8
+  },
+  {
+   "person": "neuling_a",
+   "lage": "verletzt",
+   "knoten": 16
+  },
+  {
+   "person": "neuling_a",
+   "lage": "werte",
+   "knoten": 12
+  },
+  {
+   "person": "demo_film",
+   "lage": "plan",
+   "knoten": 9
+  },
+  {
+   "person": "demo_film",
+   "lage": "hinten",
+   "knoten": 9
+  },
+  {
+   "person": "demo_film",
+   "lage": "krank",
+   "knoten": 8
+  },
+  {
+   "person": "demo_film",
+   "lage": "verletzt",
+   "knoten": 16
+  },
+  {
+   "person": "demo_film",
+   "lage": "werte",
+   "knoten": 13
+  }
+ ],
+ "groesse": {
+  "knoten": 249,
+  "blobs": 6319,
+  "bytes_roh": 17008070,
+  "bytes_gzip_ca": 3861496
+ }
+}

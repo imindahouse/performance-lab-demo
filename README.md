@@ -19,30 +19,35 @@ Entwicklung über Monate und Jahre (das **Lab**) und schlägt jeden Morgen vor, 
 leichter wird oder ausfällt (der **Coach**). Gebaut als mobile Web-App mit Android-Hülle, für meinen eigenen
 Alltag, mit KI-Agenten als Entwicklungsteam und einem Test-zuerst-Vorgehen.
 
-> **Diese Demo zeigt ausschließlich synthetische Beispieldaten** (Stand 25.10.2026). Es sind keine echten
+> **Diese Demo zeigt ausschließlich synthetische Beispieldaten** (Stand 03.11.2026). Es sind keine echten
 > Gesundheitsdaten enthalten, nicht meine und nicht die von jemand anderem. Die Seite lädt nur ihre eigenen Dateien,
 > setzt keine Cookies und hat kein Tracking.
 
 ## Ausprobieren
 
-**[▶ Demo öffnen](https://imindahouse.github.io/performance-lab-demo/)**, am Handy im Vollbild, am Laptop in einem Handyrahmen.
+**[▶ Demo öffnen](https://imindahouse.github.io/performance-lab-demo/)**, am Laptop steht die Auswahl rechts neben dem Handy, am Handy im Vollbild mit einer knappen Auswahl am unteren Rand.
+
+Wähle eine der vier erfundenen Personen und eine von fünf Lagen (*Im Plan*, *Hinten dran*, *Krank*, *Verletzt*, *Werte fallen*).
+Mit **„Eine Woche weiter“** schreibst du die Geschichte fort, beantwortest Rückfragen des Coaches direkt im Handy und siehst
+in der Zeile **„Was ist passiert“**, was die Person getan hat und in welchem Zustand der Wochenplan jetzt steht. Jeder Verlauf
+ist beim Bau mit dem echten Coach-Kern aus synthetischen Daten vorberechnet.
 
 | Bereich | Was die Demo zeigt |
 |---|---|
 | **Coach** | Tages-Check nach den Nachtwerten mit Begründung, Wochenplan (Plan gegen aktuell), Wochenrückblick mit Ampel und Coach-Satz |
-| **Lab** | sechs Metriken (Umfang, Ruhepuls, Pace, VO2max, HRV, Schlaf) über 3 Monate bis „Alles“, Vorjahreslinie, Woche antippen für die Details, auffällige Tage markiert |
+| **Lab** | sechs Metriken (Umfang, Ruhepuls, Pace, VO2max, HRV, Schlaf) über 3 Monate bis „Alles“, Woche antippen für die Details, auffällige Tage markiert, „Warum?“ erklärt die Entwicklung |
+| **Ziel** | nächster Wettkampf mit Prognose und Zielfenster, Tapering-Check; Anlegen und Ändern gibt es in der Demo nicht |
 
 <table>
   <tr>
     <td width="33%" valign="top"><img src="screenshots/coach.png" alt="Coach: Tages-Check und Wochenplan"><br><sub><b>Coach:</b> Tages-Check mit den Nachtwerten und Wochenplan</sub></td>
     <td width="33%" valign="top"><img src="screenshots/lab.png" alt="Lab: Umfang und Ruhepuls"><br><sub><b>Lab:</b> Umfang mit Vorjahreslinie, Ruhepuls, Pace und mehr</sub></td>
-    <td width="33%" valign="top"><img src="screenshots/rueckblick.png" alt="Wochenrückblick mit Ampel"><br><sub><b>Rückblick:</b> Der Rückblick steht auf „positiv“: Der Einbruch liegt hinter der Demo-Person und taucht in den letzten sieben Tagen nicht mehr auf. Die Demo-Person hat eine eingebaute Einbruchswoche (HRV sinkt, Ruhepuls steigt).</sub></td>
+    <td width="33%" valign="top"><img src="screenshots/rueckblick.png" alt="Wochenrückblick mit Ampel"><br><sub><b>Rückblick:</b> Der Rückblick steht auf „stabil“: Der Einbruch ist fast aus den letzten sieben Tagen herausgelaufen. Die Demo-Person hat eine eingebaute Einbruchswoche (HRV sinkt, Ruhepuls steigt).</sub></td>
   </tr>
 </table>
 
-**In Arbeit** und deshalb in der Demo nicht enthalten: der Bereich *Ziel* (Wettkampf, Zielzeit-Prognose, Tapering) und
-die Erklärung „Warum ändert sich der Wert?“ im Lab. Auch der Kern des Trainingsplans wird gerade neu gebaut, Wochenplan
-und Tages-Check zeigen in der Demo den bisherigen Stand.
+Die Demo zeigt den Stand der Software, nicht mehr: Der Kern des Trainingsplans ist neu gebaut und noch nicht durch Fachleute
+geprüft, seine Zahlen sind vorläufig.
 
 ## Wie es gebaut ist
 
@@ -68,18 +73,20 @@ flowchart LR
 | Prüfung | pytest, Node-Unit-Tests, Playwright, GitHub Actions |
 
 Leitgedanken: **Code entscheidet, das Sprachmodell kommuniziert.** Die Tagesanpassung darf nur *entschärfen*, nie
-verschärfen, ein Fehler macht das Training im schlimmsten Fall zu vorsichtig, nie gefährlich. Push-Nachrichten
+verschärfen: Ein Fehler in dieser Regel macht den Tag nie härter als geplant. Übersieht sie eine Störung, bleibt es beim Plan.
+Sie ersetzt also weder das eigene Gefühl noch eine Ärztin oder einen Arzt. Push-Nachrichten
 enthalten nie Gesundheitsdaten, nur das Ereignis. Der Client rechnet keine fachlichen Kennzahlen, er zeigt, was das
 Backend liefert.
 
 ## So entsteht diese Demo
 
-Der Client hat eine eingebaute Demo-Betriebsart: Beim Build startet ein Skript das Backend im Demo-Modus
-(gegen eine synthetische Datenbank, nie gegen echte Daten), ruft alle Endpunkte ab, die der Client braucht, und legt
-die Antworten als JSON-Dateien ab. Die Seite liest nur diese Dateien, es gibt kein Backend und keinen Token. Die
-Beispieldaten kommen aus einem Generator mit festen Läuferprofilen, die Zahlen auf dem Bildschirm rechnet derselbe
-Backend-Code wie im echten Betrieb. Eine Content-Security-Policy der Seite erlaubt dem Browser keine Verbindung zu
-fremden Adressen, und vor jeder Veröffentlichung prüft ein Skript den fertigen Build auf Datenabfluss.
+Beim Build rechnet ein Skript vier erfundene Personen in fünf Lagen vor: Es schreibt für jede eine synthetische Datenbank Tag
+für Tag fort (Nachtwerte und Läufe der Person), und derselbe Backend-Code wie im echten Betrieb plant die Woche, entscheidet den
+Tages-Check, stellt Rückfragen und nimmt die Antworten entgegen. Aus jedem Zustand legt das Skript alle Antworten ab, die der
+Client braucht (das sind rund 250 Zustände, zusammen etwa 17 MB, gezippt knapp 4 MB). Die Seite liest nur diese Dateien, es gibt
+kein Backend und keinen Token. Eine Antwort im Handy wählt den passenden vorberechneten Zustand, es wird nichts gesendet. Die
+Beispieldaten kommen aus einem Generator mit festen Läuferprofilen. Eine Content-Security-Policy der Seite erlaubt dem Browser
+keine Verbindung zu fremden Adressen, und vor jeder Veröffentlichung prüft ein Skript den fertigen Build auf Datenabfluss.
 
 Der Quellcode ist privat und auf Anfrage einsehbar. Dieses Repository enthält nur den fertigen Build und diese
 Beschreibung.
@@ -96,8 +103,9 @@ synthetischen Daten, die echte Datenbank ist für Tests gesperrt, eine Leitplank
 
 ## Grenzen
 
-Das ist ein persönliches Projekt und **kein Medizinprodukt**. Die Trainingsvorschläge sind keine ärztliche oder
-therapeutische Beratung, und die Zahlen des Coach-Plans sind vorläufig und noch nicht extern geprüft.
+Das ist ein persönliches Projekt und **kein Medizinprodukt, keine ärztliche Beratung**. Die Trainingsvorschläge ersetzen
+weder eine Ärztin noch einen Arzt noch eine Physiotherapeutin. Die Zahlen des Coach-Plans sind vorläufig. Zwei andere
+KI-Modelle haben den Plan gelesen, eine Prüfung durch Fachleute steht aus.
 
 ## Autor
 
