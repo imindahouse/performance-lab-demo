@@ -4,22 +4,26 @@
   {
    "key": "demo_ambitioniert",
    "race_type": "Marathon",
-   "race_date": "2026-11-29"
+   "race_date": "2026-11-29",
+   "tage_bis": 27
   },
   {
    "key": "amateur_a",
    "race_type": "Halbmarathon",
-   "race_date": "2027-01-03"
+   "race_date": "2027-01-03",
+   "tage_bis": 62
   },
   {
    "key": "neuling_a",
    "race_type": "5K",
-   "race_date": "2027-03-07"
+   "race_date": "2027-03-07",
+   "tage_bis": 125
   },
   {
    "key": "demo_film",
    "race_type": "Halbmarathon",
-   "race_date": "2027-01-10"
+   "race_date": "2027-01-10",
+   "tage_bis": 68
   }
  ],
  "lagen": [
@@ -33,7 +37,7 @@
   {
    "person": "demo_ambitioniert",
    "lage": "plan",
-   "knoten": 9
+   "knoten": 12
   },
   {
    "person": "demo_ambitioniert",
@@ -53,17 +57,17 @@
   {
    "person": "demo_ambitioniert",
    "lage": "werte",
-   "knoten": 20
+   "knoten": 8
   },
   {
    "person": "amateur_a",
    "lage": "plan",
-   "knoten": 5
+   "knoten": 9
   },
   {
    "person": "amateur_a",
    "lage": "hinten",
-   "knoten": 24
+   "knoten": 27
   },
   {
    "person": "amateur_a",
@@ -83,7 +87,7 @@
   {
    "person": "neuling_a",
    "lage": "plan",
-   "knoten": 5
+   "knoten": 9
   },
   {
    "person": "neuling_a",
@@ -103,7 +107,7 @@
   {
    "person": "neuling_a",
    "lage": "werte",
-   "knoten": 12
+   "knoten": 10
   },
   {
    "person": "demo_film",
@@ -128,13 +132,13 @@
   {
    "person": "demo_film",
    "lage": "werte",
-   "knoten": 13
+   "knoten": 10
   }
  ],
  "groesse": {
-  "knoten": 249,
-  "blobs": 6319,
-  "bytes_roh": 17008070,
-  "bytes_gzip_ca": 3861496
+  "knoten": 246,
+  "blobs": 6315,
+  "bytes_roh": 16475268,
+  "bytes_gzip_ca": 3766020
  }
 }

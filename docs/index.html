@@ -9,10 +9,17 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'self'; base-uri 'none'; form-action 'none'" />
     <meta name="referrer" content="no-referrer" />
     <meta name="description" content="Demo des persönlichen Lauf-Coaches Performance Lab, nur synthetische Beispieldaten." />
-    <script type="module" crossorigin src="./assets/index-c_DTa0Ln.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Jr7xI9yD.css">
+    <script type="module" crossorigin src="./assets/index-BZFveGwp.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B7kmmnPI.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><div class="boot" role="status" data-testid="boot"><i></i>Lädt …</div></div>
+    <style>
+      body { background: #0d0d13; margin: 0; }
+      .boot { display: flex; min-height: 100dvh; align-items: center; justify-content: center; gap: 0.7rem; color: #a6a6b9; font: 500 1rem system-ui, sans-serif; }
+      .boot i { width: 1.1rem; height: 1.1rem; border: 2px solid rgba(166, 166, 185, 0.3); border-top-color: #f2b544; border-radius: 50%; animation: boot-spin 0.9s linear infinite; }
+      @keyframes boot-spin { to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) { .boot i { animation: none; } }
+    </style>
   </body>
 </html>

@@ -19,7 +19,7 @@ Entwicklung über Monate und Jahre (das **Lab**) und schlägt jeden Morgen vor, 
 leichter wird oder ausfällt (der **Coach**). Gebaut als mobile Web-App mit Android-Hülle, für meinen eigenen
 Alltag, mit KI-Agenten als Entwicklungsteam und einem Test-zuerst-Vorgehen.
 
-> **Diese Demo zeigt ausschließlich synthetische Beispieldaten** (Stand 03.11.2026). Es sind keine echten
+> **Diese Demo zeigt ausschließlich synthetische Beispieldaten** (Stand 05.11.2026). Es sind keine echten
 > Gesundheitsdaten enthalten, nicht meine und nicht die von jemand anderem. Die Seite lädt nur ihre eigenen Dateien,
 > setzt keine Cookies und hat kein Tracking.
 
@@ -36,6 +36,7 @@ ist beim Bau mit dem echten Coach-Kern aus synthetischen Daten vorberechnet.
 |---|---|
 | **Coach** | Tages-Check nach den Nachtwerten mit Begründung, Wochenplan (Plan gegen aktuell), Wochenrückblick mit Ampel und Coach-Satz |
 | **Lab** | sechs Metriken (Umfang, Ruhepuls, Pace, VO2max, HRV, Schlaf) über 3 Monate bis „Alles“, Woche antippen für die Details, auffällige Tage markiert, „Warum?“ erklärt die Entwicklung |
+| **Aufbau einer Einheit** | Ein Tipp auf einen Tag im Wochenplan zeigt, wie sich die Einheit gliedern ließe (Einlaufen, harter Teil, Trab, Auslaufen), mit Puls und erwartetem Tempo. Das ist noch nicht Teil des Coach-Kerns |
 | **Ziel** | nächster Wettkampf mit Prognose und Zielfenster, Tapering-Check; Anlegen und Ändern gibt es in der Demo nicht |
 
 <table>
