@@ -19,7 +19,7 @@ Entwicklung über Monate und Jahre (das **Lab**) und schlägt jeden Morgen vor, 
 leichter wird oder ausfällt (der **Coach**). Gebaut als mobile Web-App mit Android-Hülle, für meinen eigenen
 Alltag, mit KI-Agenten als Entwicklungsteam und einem Test-zuerst-Vorgehen.
 
-> **Diese Demo zeigt ausschließlich synthetische Beispieldaten** (Stand 05.11.2026). Es sind keine echten
+> **Diese Demo zeigt ausschließlich synthetische Beispieldaten** (Stand 06.11.2026). Es sind keine echten
 > Gesundheitsdaten enthalten, nicht meine und nicht die von jemand anderem. Die Seite lädt nur ihre eigenen Dateien,
 > setzt keine Cookies und hat kein Tracking.
 
