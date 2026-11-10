@@ -137,8 +137,8 @@
  ],
  "groesse": {
   "knoten": 228,
-  "blobs": 6055,
-  "bytes_roh": 15812484,
-  "bytes_gzip_ca": 3608870
+  "blobs": 6257,
+  "bytes_roh": 16712686,
+  "bytes_gzip_ca": 3879109
  }
 }
